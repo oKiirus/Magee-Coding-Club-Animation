@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://2chldnslye2u"]
-
-[ext_resource type="Texture2D" uid="uid://m5ym5l26vpdp" path="res://icon.svg" id="1_h1clk"]
-
-[node name="GodotSprite" type="Sprite2D"]
-modulate = Color(0.184314, 0.913725, 0, 1)
-scale = Vector2(0.831812, 0.831812)
-texture = ExtResource("1_h1clk")
