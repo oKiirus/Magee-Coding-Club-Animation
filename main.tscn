@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8mnteq6vgooc"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_cr4gh"]
+[ext_resource type="Texture2D" uid="uid://drjreyygl4rtk" path="res://Untitled.png" id="1_tcww3"]
+
+[sub_resource type="Environment" id="Environment_cq0wk"]
+background_mode = 3
+glow_enabled = true
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cr4gh")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(960, 544)
+sleeping = true
+lock_rotation = true
+freeze = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+rotation = 1.5708
+scale = Vector2(1.13974, 1.04601)
+polygon = PackedVector2Array(-296, 0, -216, 328, 200, 536, 208, -528, -184, -264)
+
+[node name="TextEdit" type="TextEdit" parent="RigidBody2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -29.0
+offset_right = 104.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MAGEE CODING CLUB"
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(0, -4)
+texture = ExtResource("1_tcww3")
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cq0wk")
+
+[node name="SpawnBall" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.05
+one_shot = true
+
+[node name="Balls" type="Node" parent="."]
+unique_name_in_owner = true
